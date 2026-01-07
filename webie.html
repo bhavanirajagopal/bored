@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Important Website</title>
+  <style>
+    body {
+      background: #ffe6f2;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    button {
+      font-size: 18px;
+      padding: 12px 20px;
+      border-radius: 25px;
+      border: none;
+      background: #ff66a3;
+      color: white;
+      cursor: pointer;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Welcome 😌</h1>
+<p id="text">This website does nothing useful.</p>
+
+<button onclick="changeText()">Click anyway</button>
+<button onclick="danger()">Danger button</button>
+
+<script>
+  function changeText() {
+    const msgs = [
+      "Okay wow you actually clicked",
+      "You have elite clicking skills",
+      "This was coded by someone cooler than average",
+      "If you’re smiling, my job is done",
+      "Still clicking? Respect."
+    ];
+    document.getElementById("text").innerText =
+      msgs[Math.floor(Math.random() * msgs.length)];
+  }
+
+  function danger() {
+    document.body.style.background = "#ffd1dc";
+    document.getElementById("text").innerText =
+      "Congrats. You survived the danger button 😎";
+  }
+</script>
+
+</body>
+</html>
